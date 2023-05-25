@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Poco a poco is a Japanese high quality hair salon in Aucklan. d" />
+    <meta
+      name="keywords"
+      content="Hair salon, stylists, Cut, colour, Treatment, Permanent wave, Hair updo, Hair products"
+    />
+
+    <title>About Us - Poco a poco - Hair Salon</title>
+
+    <script src="https://kit.fontawesome.com/99b5199ed8.js" crossorigin="anonymous"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="css/main.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Files-->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+
+    <!-- JS Files-->
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+  </head>
+
+
+  <body>
+     <!-- ########################## Header/Navbar ########################## -->
+     <div class="container-fluid">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid px-4 px-md-5">
+          <a class="navbar-brand py-3 py-md-4" href="index.html">
+            <picture>
+              <source media="(min-width: 1140px)" srcset="images/common/logo_header_lg.png">
+              <source media="(min-width: 720px)" srcset="images/common/logo_header_md.png">
+              <img src="images/common/logo_header.png" alt="Poco a poco Logo">
+            </picture>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse pt-3" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"><b>About</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html"><b>Services</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html"><b>Products</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="newWindow()" style="cursor: pointer;"><b>Booking</b></a>
+              </li>
+              <li class="nav-item">
+                <p class="nav-link">|</p>
+              </li>
+              <li class="nav-item">
+                <!-- Button to open the modal login form -->
+                <button class="nav-link" id="login_button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><b class="text-primary">Register</b></button>
+              </li>
+              <li class="nav-item">
+                <!-- Button to open the modal login form -->
+                <button class="nav-link" id="login_button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><b class="text-primary">Login</b></button>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- ########################## Register Modal ########################## -->
+      <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="title_container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2 class="display-5 text-primary" id="register_title">Register</h2>
+          </div>
+      
+          <div class="container_input">
+            <div class="row">
+              <div class="col-6">
+                <label for="fname"><b>First name</b></label>
+                <input type="text" placeholder="First name" name="fname" required> 
+              </div>
+              <div class="col-6">
+                <label for="lname"><b>Last name</b></label>
+                <input type="text" placeholder="Last name" name="lname" required>
+              </div>
+            </div>
+
+            <label for="email"><b>Your Email</b></label>
+            <input type="email" placeholder="Your email" name="email" required>
+
+            <label for="mobile"><b>Mobile number</b></label>
+            <input type="tel" placeholder="Mobile number" name="mobile" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Password" name="psw" required>
+
+            <label for="psw"><b>Repeat Your Password</b></label>
+            <input type="password" placeholder="Repeat Your Password" name="psw" required>
+            
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" id="submit_login">Register</button>
+            
+          </div>
+      
+          <div class="container_input" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Already have an account? <a href="#">Sign in</a>.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- ########################## Login Moda2 ########################## -->
+      <div id="id02" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="title_container">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2 class="display-5" id="login_title">Customer Login</h2>
+          </div>
+      
+          <div class="container_input">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit" id="submit_login">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container_input" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
+      <!-- ########################## Contents ########################## -->
+        
+        <!-- Top Image -->
+        <div class="container-fluid">
+          <picture>
+            <source media="(min-width: 1140px)" srcset="images/common/salon_interior_top.png">
+            <source media="(min-width: 720px)" srcset="images/common/salon_interior_top.png">
+            <img class="mx-auto d-block img-fluid" src="images/common/salon_interior_top.png" alt="Salon service image" width="100%">
+          </picture>
+          <div class="container-fluid" id="page_title">
+            <h1 class="display-4 text-center text-white">About Us</h1>
+          </div>
+        </div>
+        
+
+      <!-- Salon Introduction-->
+      <section class="container my-5 py-5">
+        <div class="row">
+          <div class="container col-lg-8 pb-2 pb-md-0 pe-lg-3">
+            <h1 class="display-5 text-primary">Welcome to Poco a poco</h1>
+            <p class="lead pt-3">
+              “Poco a poco” means little by little in Italian and Spanish. 
+                Sucessfully introducing Japanese high technology and philosophy of hair designing 
+                little by little. We understand its not just a hair style but an indispensable 
+                part of your fashion. 
+                Your hair style reflects your personality. 
+                If you want to express your personality and fashion, 
+                you are always welcome to “poco a poco”.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <video width="100%" height="auto" controls>
+              <source src="images/about/salon_movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <hr class="container bg-secondary border-2 border-top border-secondary" />
+
+      <!-- Stylists -->
+      <section class="container px-lg-5">
+        <div class="container my-5 pt-5 pb-2">
+          <h2 class="container display-6 text-center text-primary">Poco a poco Stylists</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/about/staff1.png"
+              alt="Masa image"
+            /><br>
+            <p class="text-center"><b>Masa</b><br>
+              Poco a poco Director</p>
+          </div>
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/about/staff2.png"
+              alt="Chica image"
+            /><br>
+            <p class="text-center"><b>Chika</b><br>
+              Poco a poco Director</p>
+          </div>
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/about/staff3.png"
+              alt="Kumi image"
+            /><br>
+            <p class="text-center"><b>Kumi</b><br>
+              Senior hair dresser</p>
+          </div>
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/about/staff4.png"
+              alt="Sachi image"
+            /><br>
+            <p class="text-center"><b>Sachi</b><br>
+              Senior hair dresser</p>
+          </div>
+
+        <div class="text-center mb-5 pt-3 pb-5">
+          <a onclick="newWindow()" class="btn btn-lg btn-primary text-white">Booking</a>
+        </div>
+      </section>
+
+      <hr class="container bg-secondary border-2 border-top border-secondary" />
+
+
+      <!-- Parking Instruction-->
+      <section class="container mb-5 py-4 pb-5">
+        <div class="container col-xl-6 justify-content-center my-5 pb-5">
+          <h1 class="display-5 text-primary text-md-center">Complimentry car parking</h1>
+          <p class="lead pt-3 text-md-center">
+            We ensure our customers have a superior experience overall so we also 
+            include complimentry car parking. Instructions for our customers to 
+            find utilise our carpark hassle. There are simple 3 steps.
+          </p>
+        </div>
+
+        <div class="container-fluid px-4">
+          <div class="row">
+
+            <div class="container-fluid col-md-8">
+              <div class="container">
+                <div class="row pb-4">
+                  <div class="col-2">
+                    <h1 class="display-1 text-primary text-center opacity-50">1</h1>
+                  </div>
+                  <div class="col-10">
+                    <h5>Park your car in the most convenient car bay 
+                      in Wilson Car Parking, located in our shops complex 
+                      “newmarket rise”.</h5>
+                      <p><small>You also have more space behind the shop complex. 
+                        Park in the “public parking”. 
+                        You must not park in reserved parking spaces.</small></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container">
+                <div class="row pb-4">
+                  <div class="col-2">
+                    <h1 class="display-1 text-primary text-center opacity-50">2</h1>
+                  </div>
+                  <div class="col-10">
+                    <h5>Come into Poco a poco and recieve your parking ticket. </h5>
+                      <p><small>If you are not sure you are parked in the correct place 
+                        we will assist you to confirm the space is safe place to park. </small></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container">
+                <div class="row pb-4">
+                  <div class="col-2">
+                    <h1 class="display-1 text-primary text-center opacity-50">3</h1>
+                  </div>
+                  <div class="col-10">
+                    <h5>Display a valid parking ticket onto your car window.</h5>
+                      <p><small>We can provide a parking ticket up to 30 minutes prior to  your appointment. 
+                        So you can enjoy shopping around or 
+                        have a cup coffee at our lovely neighbour cafes “Cafe Monet” or  “Cafe Brioche”.</small></p>
+                  </div>
+                </div>
+              </div>
+              <div class="container border border-primary rounded p-4">
+                <p class="text-center">
+                  <svg width="40" height="40" fill="#EB5757" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                </p>
+                <h6>We validate customers’  parking,
+                  We cannot cover any fine or issue. 
+                  </h6>
+                <p><small>Parking your car is your responsibility.
+                  Please make sure to come in the salon, 
+                  recieve a parking ticket 
+                  and display it after you park your car.</small></p>
+              </div>
+            </div>
+
+            <div class="container-fluid col-md-4 pt-5 pt-md-0 ps-md-5">
+                  <img class="pb-3" src="images/about/parking1.png" alt="Wilson Carpark" width="100%">
+                  <img src="images/about/parking2.png" alt="Carpark area" width="100%">
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- ########################## Footer ########################## -->
+      <footer>
+        <div class="container-fluid bg-success px-3 py-5 p-sm-5">
+          <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-5 mb-md-0">
+              <h3 class="text-white pb-2">Opening Hours</h3>
+              <table class="table table-sm table-borderless text-white">
+                <tr>
+                  <td class="text-white">Monday</td>
+                  <td class="text-white">11:00 - 19:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Tuesday</td>
+                  <td class="text-white">11:00 - 19:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Wednesday</td>
+                  <td class="text-white">Closed</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Thursday</td>
+                  <td class="text-white">11:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Friday</td>
+                  <td class="text-white">11:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Saturday</td>
+                  <td class="text-white">10:00 - 18:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Sunday</td>
+                  <td class="text-white">10:00 - 18:00</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="col-md-8 ps-md-3">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4 class="text-white pb-2">Find Us</h4>
+                  <p class="text-white">
+                    59 Remuera Road,<br />
+                    Newmarket, Auckland 1050<br />
+                    09 379 8904<br />
+                    pocoappointment@icloud.com
+                  </p>
+                  <a onclick="newWindow()" class="btn btn-outline-light mb-4">Booking</a>
+                </div>
+
+                <!-- Google map -->
+                <div class="col-sm-6 float-end">
+                  <img src="images/common/map_1.png" width="100%" alt="Google Map">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="container-fluid py-4 pb-md-0">
+          <div class="row mt-3 mb-2 m-md-0">
+
+            <div class="col-md-12">
+              <a class="text-center" href="index.html" alt="Poco a poco Logo">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="images/common/logo_footer_lg.png">
+                  <img class="rounded mx-auto d-block" src="images/common/logo_footer_md.png" alt="Poco a poco Logo">
+                </picture>
+              </a>
+            </div>
+
+            <div class="col-md-6 pt-4 pt-md-0 ps-md-4">
+              <h6 class="text-center text-md-start">
+                <a class="text-center" href="help.html"><b>User Help</b></a>
+              </h6>
+            </div>
+
+            <div class="col-md-6">
+              <p class="text-center text-md-end pe-md-3">
+                <small>© 2021 Poco a poco, All Rights Reserved</small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    <!-- container-fluid end-->
+    </div>
+
+  </body>
+</html>

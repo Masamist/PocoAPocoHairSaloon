@@ -1,0 +1,16 @@
+/* Contact us */
+#contact_icon {
+  width: 6rem;
+  height: 6rem;
+  background-color: #ada482;
+  border-radius: 50%;
+  font-size: 3.3rem;
+  display: inline-block;
+  padding-top: 0.6rem;
+  padding-left: 1.3rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+#contact_bg {
+  background-color: #f0efed;
+}

@@ -1,0 +1,16 @@
+#register:target::before,
+#login:target::before,
+#account_setting:target::before,
+#booking_method:target::before,
+#change_booking:target::before,
+#cancel_booking:target::before,
+#site_map:target::before,
+#privacy:target::before,
+#register:target::before,
+#security:target::before {
+  display: block;
+  content: " ";
+  margin-top: -130px;
+  height: 130px;
+  visibility: hidden;
+}

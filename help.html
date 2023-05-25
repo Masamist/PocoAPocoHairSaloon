@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Poco a poco is a Japanese high quality hair salon in Aucklan. d" />
+    <meta
+      name="keywords"
+      content="Hair salon, stylists, Cut, colour, Treatment, Permanent wave, Hair updo, Hair products"
+    />
+
+    <title>User Help - Poco a poco - Hair Salon</title>
+
+    <script src="https://kit.fontawesome.com/99b5199ed8.js" crossorigin="anonymous"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="css/main.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Files-->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" type="text/css" href="css/help.css" />
+
+    <!-- JS Files-->
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+    
+  </head>
+
+
+  <body>
+    <!-- ########################## Header/Navbar ########################## -->
+    <div class="container-fluid">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid px-4 px-md-5">
+          <a class="navbar-brand py-3 py-md-4" href="index.html">
+            <picture>
+              <source media="(min-width: 1140px)" srcset="images/common/logo_header_lg.png">
+              <source media="(min-width: 720px)" srcset="images/common/logo_header_md.png">
+              <img src="images/common/logo_header.png" alt="Poco a poco Logo">
+            </picture>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse pt-3" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"><b>About</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html"><b>Services</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html"><b>Products</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="newWindow()" style="cursor: pointer;"><b>Booking</b></a>
+              </li>
+              <li class="nav-item">
+                <p class="nav-link">|</p>
+              </li>
+              <li class="nav-item">
+                <!-- Button to open the modal login form -->
+                <button class="nav-link" id="login_button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><b class="text-primary">Register</b></button>
+              </li>
+              <li class="nav-item">
+                <!-- Button to open the modal login form -->
+                <button class="nav-link" id="login_button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><b class="text-primary">Login</b></button>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- ########################## Register Modal ########################## -->
+      <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="title_container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2 class="display-5 text-primary" id="register_title">Register</h2>
+          </div>
+      
+          <div class="container_input">
+            <div class="row">
+              <div class="col-6">
+                <label for="fname"><b>First name</b></label>
+                <input type="text" placeholder="First name" name="fname" required> 
+              </div>
+              <div class="col-6">
+                <label for="lname"><b>Last name</b></label>
+                <input type="text" placeholder="Last name" name="lname" required>
+              </div>
+            </div>
+
+            <label for="email"><b>Your Email</b></label>
+            <input type="email" placeholder="Your email" name="email" required>
+
+            <label for="mobile"><b>Mobile number</b></label>
+            <input type="tel" placeholder="Mobile number" name="mobile" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Password" name="psw" required>
+
+            <label for="psw"><b>Repeat Your Password</b></label>
+            <input type="password" placeholder="Repeat Your Password" name="psw" required>
+            
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" id="submit_login">Register</button>
+            
+          </div>
+      
+          <div class="container_input" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Already have an account? <a href="#">Sign in</a>.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- ########################## Login Moda2 ########################## -->
+      <div id="id02" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="title_container">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2 class="display-5" id="login_title">Customer Login</h2>
+          </div>
+      
+          <div class="container_input">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit" id="submit_login">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container_input" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
+      <!-- ########################## Contents ########################## -->
+        
+    <!-- Top Image -->
+    <div class="container-fluid">
+        <picture>
+            <source media="(min-width: 1140px)" srcset="images/common/salon_interior_top.png">
+            <source media="(min-width: 720px)" srcset="images/common/salon_interior_top.png">
+            <img class="mx-auto d-block img-fluid" src="images/common/salon_interior_top.png" alt="Salon service image" width="100%">
+        </picture>
+        <div class="container-fluid" id="page_title">
+            <h1 class="display-4 text-center text-white">User Help</h1>
+        </div>
+    </div>
+        
+
+    <!-- Contact Detail-->
+    <section class="container-fluid pt-5 pb-5">
+        <div class="container py-5">
+            <div class="row gx-5">
+
+                <div class="col-lg-4">   
+                    <div class="container-fruid rounded border border-2 border-primary mb-4 pt-5">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <img src="images/help/account.png" alt="Account Help icon" height="90px">
+                            </div>
+                        </div>
+                        <div class="container py-5">
+                            <h4 class="display-6 text-center">Account Help</h4><br>
+                            <p class="fs-4 fw-light text-center text-lg-start">
+                                <a href="#register">Register</a><br>
+                                <a href="#login">Login</a><br>
+                                <a href="#account_setting">Account setting</a>
+                                </p>
+                        </div>
+                    </div>  
+                </div>
+                
+                <div class="col-lg-4">   
+                    <div class="container-fruid rounded border border-2 border-primary mb-4 pt-5">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <img src="images/help/booking.png" alt="Booking help icon" height="90px">
+                            </div>
+                        </div>
+                        <div class="container py-5">
+                            <h4 class="display-6 text-center">Booking</h4><br>
+                            <p class="fs-4 fw-light text-center text-lg-start">
+                                <a href="#booking_method">Booking method</a><br> 
+                                <a href="#change_booking">Change booking detail</a><br>
+                                <a href="#cancel_booking">Cancel your booking</a>
+                                </p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="col-lg-4">   
+                  <div class="container-fruid rounded border border-2 border-primary mb-4 pt-5">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <img src="images/help/web.png" alt="About website Help icon" height="90px">
+                            </div>
+                        </div>
+                        <div class="container py-5">
+                            <h4 class="display-6 text-center">About Website</h4><br>
+                            <p class="fs-4 fw-light text-center text-lg-start">
+                                <a href="#site_map">Site map</a><br>
+                                <a href="#privacy">Privacy policy</a><br>
+                                <a href="#security">Security</a>
+                                </p>
+                        </div>
+                    </div>  
+                </div>
+
+                <main> 
+                  <div class="container mt-5 py-5">  <!-- Account Help -->
+                    <h2 class="mb-3" id="register">Account Help - Register</h2>
+                    
+                    <div class="container my-5">
+                      <div class="row gx-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">How to register?</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <p>You click on the Register Link on top right of the page, 
+                            simply fill in your name, email, and mobile number. 
+                            Then create password, then press register button.
+                          Once you have registered, an email with an activation link will be 
+                          sent to the email address you provided. 
+                          Clicking on the activation link opens the account activation page.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h2 class="mb-3" id="login">Account Help - Login</h2>
+                    <div class="container my-5">
+                      <div class="row gx-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">How to login?</h5>
+                        </div>
+                        <div class="col-lg-8">
+                        <p>You click on the Login button on top right of the page, 
+                              enter your email and password, then click the login button.
+                              You will be viewing your member's page.</p>
+                      </div>
+                      </div>
+
+                      <div class="row gx-5 mt-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">Forgot password?</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <p>If you have forgotten your password, don't worry.
+                            You may reset it by clicking "Forgot my password". You are then required to enter 
+                            your registered email address and click "Reset Password". 
+                            An email notification will be sent to you. 
+                            In the email you receive confirm your password reset 
+                            by clicking on the reset password "link". It will direct you to enter 
+                            your new password. 
+                            If all steps are followed and completed, 
+                            a successful password reset confirmation will be displayed. 
+                            You will then be able to login with your new password.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h2 class="mb-3" id="account_setting">Account Help - Account setting</h2> 
+                    <div class="container my-5">
+                      <div class="row gx-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">How to manage changing my details?</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <p>When you change your details such as family name and phone number, 
+                              login and go to my page. Click change detail button at the bottom of the page.
+                              Enter the new information and save the change. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <div class="container mt-5 py-5"> <!-- Booking -->
+
+                    <h2 class="mb-3" id="booking_method">Booking - Booking method</h2>
+                    <div class="container my-5">
+                      <div class="row gx-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">How to book?</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <p>Simply click on the "Booking" button at the top of the website. 
+                            Choose the service you would like
+                            and a hair stylist. Select a time slot then press the booking button. 
+                            Also an email notification will be sent to you including your appointment details.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h2 class="mb-3" id="change_booking">Booking - Change booking details</h2>
+                    <div class="container my-5">
+                      <div class="row gx-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">How to Change booking details?</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <p>Login first then go to My Page, locate your current booking, 
+                            and click the “Change booking” button. Then you can change 
+                            the date and time or stylist. 
+                            After you have made your changes press the “Update” button. 
+                            If you do not have a login, call the salon 
+                            and they will make the changes for you. </p>
+                        </div>
+                      </div>
+
+                      <div class="row gx-5 mt-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">Can I change my booking at any time?</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <p>You can change your booking up to 24 hours 
+                            in advance of your appointment both online 
+                            or by calling the salon. 
+                            If it is less than 24 hours this cannot be done online, 
+                            please call the salon.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  <h2 class="mb-3" id="cancel_booking">Booking - Cancel your booking</h2>
+                    
+                    <div class="container my-5">
+                      <div class="row gx-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">How to manage cancelling my booking?</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <p>You can cancel up to 24 hours in advance of your appointment both online or 
+                            by calling the salon. If it is less than 24 hours 
+                            this cannot be done online, please call the salon.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <hr>
+
+                  <div class="container mt-5 py-5"> <!-- About Website -->
+
+                    <h2 class="mb-3" id="site_map">About Website - sitemap</h2>
+                    <div class="container my-5">
+                      <div class="row gx-5">
+                        <div class="col-4">
+                          <h5 class="text-primary">Site map</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <h4>Pages</h4>
+                          <ul>
+                            <li><a href="index.html"><i class="fa fa-caret-right" aria-hidden="true"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-caret-right" aria-hidden="true"></i> About</a></li>
+                            <li><a href="services.html"><i class="fa fa-caret-right" aria-hidden="true"></i> Services</a></li>
+                            <li><a href="contact.html"><i class="fa fa-caret-right" aria-hidden="true"></i> Contact Us</a></li>
+                            <li><a onclick="newWindow()" style="color: #ada482;"><i class="fa fa-caret-right" aria-hidden="true"></i> Booking</a></li>
+                            <li><a href="help.html"><i class="fa fa-caret-right" aria-hidden="true"></i> User Help</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h2 class="mb-3" id="privacy">About Website - Privacy Policy</h2>
+                    <div class="container my-5">
+                      <div class="row gx-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">Privacy Policy</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <p>We collect personal information from you,<br>
+                            including information about your:</p>
+
+                            <ul>
+                              <li><i class="fa fa-caret-right" aria-hidden="true"></i> name</li>
+                              <li><i class="fa fa-caret-right" aria-hidden="true"></i> contact information</li>
+                            </ul>
+                            
+                            <p>We collect your personal information in order to:</p>
+                            <ul>
+                              <li><i class="fa fa-caret-right" aria-hidden="true"></i> make a reservation.</li>
+                            </ul>
+                            <p>You have the right to ask for a copy of any personal information we hold about you, 
+                            and to ask for it to be corrected if you think it is wrong.<br>
+                            If you’d like to ask for a copy of your information, <br>
+                            or to have it corrected, please contact us at 09 379 8904.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  <h2 class="mb-3" id="security">Booking - Security</h2>
+                    
+                    <div class="container my-5">
+                      <div class="row gx-5">
+                        <div class="col-lg-4">
+                          <h5 class="text-primary">Security</h5>
+                        </div>
+                        <div class="col-lg-8">
+                          <p>Yes, your data is secure and you are the one and only owner. 
+                            All your communication with the system goes through SSL 
+                            to avoid any external snooping. 
+                            If you have created a login and password, you have been required 
+                            to create a complex password for your protection. 
+                            Anyone trying to access your account is restricted to 
+                            the number off attempts that can be made within a 5 minute period.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </main>
+
+                <div class="col-12 mt-4 mt-lg-0">
+                    <div class="container-fluid rounded border border-2 border-primary mb-5 pt-3">
+                       
+                        <div class="row justify-content-evenly">
+                        <div class="col-lg-4 px-5">
+                            <P class="fs-5 fw-lighter">Are you not really sure yet?<br>
+                                Please contact us.</P>
+                        </div>
+                        <div class="d-grid col-lg-4 pt-3 px-5">
+                            <a href="contact.html" class="btn btn-block btn-primary text-white mb-4">Go to Contact Page</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+        
+    <!-- ########################## Footer ########################## -->
+    <footer>
+        <div class="container-fluid bg-success px-3 py-5 p-sm-5">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-5 mb-md-0">
+            <h3 class="text-white pb-2">Opening Hours</h3>
+            <table class="table table-sm table-borderless text-white">
+                <tr>
+                <td class="text-white">Monday</td>
+                <td class="text-white">11:00 - 19:00</td>
+                </tr>
+                <tr>
+                <td class="text-white">Tuesday</td>
+                <td class="text-white">11:00 - 19:00</td>
+                </tr>
+                <tr>
+                <td class="text-white">Wednesday</td>
+                <td class="text-white">Closed</td>
+                </tr>
+                <tr>
+                <td class="text-white">Thursday</td>
+                <td class="text-white">11:00 - 20:00</td>
+                </tr>
+                <tr>
+                <td class="text-white">Friday</td>
+                <td class="text-white">11:00 - 20:00</td>
+                </tr>
+                <tr>
+                <td class="text-white">Saturday</td>
+                <td class="text-white">10:00 - 18:00</td>
+                </tr>
+                <tr>
+                <td class="text-white">Sunday</td>
+                <td class="text-white">10:00 - 18:00</td>
+                </tr>
+            </table>
+            </div>
+
+            <div class="col-md-8 ps-md-3">
+            <div class="row">
+                <div class="col-sm-6">
+                <h4 class="text-white pb-2">Find Us</h4>
+                <p class="text-white">
+                    59 Remuera Road,<br />
+                    Newmarket, Auckland 1050<br />
+                    09 379 8904<br />
+                    pocoappointment@icloud.com
+                </p>
+                <a onclick="newWindow()" class="btn btn-outline-light mb-4">Booking</a>
+                </div>
+
+                <!-- Google map -->
+                <div class="col-sm-6 float-end">
+                <img src="images/common/map_1.png" width="100%" alt="Google Map">
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="container-fluid py-4 pb-md-0">
+        <div class="row mt-3 mb-2 m-md-0">
+
+            <div class="col-md-12">
+            <a class="text-center" href="index.html" alt="Poco a poco Logo">
+                <picture>
+                <source media="(min-width: 720px)" srcset="images/common/logo_footer_lg.png">
+                <img class="rounded mx-auto d-block" src="images/common/logo_footer_md.png" alt="Poco a poco Logo">
+                </picture>
+            </a>
+            </div>
+
+            <div class="col-md-6 pt-4 pt-md-0 ps-md-4">
+              <h6 class="text-center text-md-start">
+                <a class="text-center" href="help.html"><b>User Help</b></a>
+              </h6>
+            </div>
+
+            <div class="col-md-6">
+            <p class="text-center text-md-end pe-md-3">
+                <small>© 2021 Poco a poco, All Rights Reserved</small>
+            </p>
+            </div>
+
+        </div>
+        </div>
+    </footer>      
+
+    <!-- container-fluid end-->
+    </div>
+
+  </body>
+</html>

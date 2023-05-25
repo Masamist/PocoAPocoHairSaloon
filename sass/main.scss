@@ -1,0 +1,12 @@
+// custom variables
+$primary: #ada482;
+$success: #857e62;
+
+.carousel-caption {
+  transform: translateY(-50%);
+  bottom: initial;
+  top: 50%;
+}
+
+// import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";

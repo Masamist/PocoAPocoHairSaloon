@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Poco a poco is a Japanese high quality hair salon in Aucklan. d" />
+    <meta
+      name="keywords"
+      content="Hair salon, stylists, Cut, colour, Treatment, Permanent wave, Hair updo, Hair products"
+    />
+
+    <title>Poco a poco - Hair Salon</title>
+
+    <script src="https://kit.fontawesome.com/99b5199ed8.js" crossorigin="anonymous"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="css/main.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Files-->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+
+    <!-- JS Files-->
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+
+
+  <body>
+    <!-- ########################## Header/Navbar ########################## -->
+    <div class="container-fluid">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid px-4 px-md-5">
+          <a class="navbar-brand py-3 py-md-4" href="index.html">
+            <picture>
+              <source media="(min-width: 1140px)" srcset="images/common/logo_header_lg.png">
+              <source media="(min-width: 720px)" srcset="images/common/logo_header_md.png">
+              <img src="images/common/logo_header.png" alt="Poco a poco Logo">
+            </picture>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse pt-3" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"><b>About</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html"><b>Services</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html"><b>Products</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="newWindow()" style="cursor: pointer;"><b>Booking</b></a>
+              </li>
+              <li class="nav-item">
+                <p class="nav-link">|</p>
+              </li>
+              <li class="nav-item">
+                <!-- Button to open the modal login form -->
+                <button class="nav-link" id="login_button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><b class="text-primary">Register</b></button>
+              </li>
+              <li class="nav-item">
+                <!-- Button to open the modal login form -->
+                <button class="nav-link" id="login_button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><b class="text-primary">Login</b></button>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- ########################## Register Modal ########################## -->
+      <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="title_container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2 class="display-5 text-primary" id="register_title">Register</h2>
+          </div>
+      
+          <div class="container_input">
+            <div class="row">
+              <div class="col-6">
+                <label for="fname"><b>First name</b></label>
+                <input type="text" placeholder="First name" name="fname" required> 
+              </div>
+              <div class="col-6">
+                <label for="lname"><b>Last name</b></label>
+                <input type="text" placeholder="Last name" name="lname" required>
+              </div>
+            </div>
+
+            <label for="email"><b>Your Email</b></label>
+            <input type="email" placeholder="Your email" name="email" required>
+
+            <label for="mobile"><b>Mobile number</b></label>
+            <input type="tel" placeholder="Mobile number" name="mobile" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Password" name="psw" required>
+
+            <label for="psw"><b>Repeat Your Password</b></label>
+            <input type="password" placeholder="Repeat Your Password" name="psw" required>
+            
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" id="submit_login">Register</button>
+            
+          </div>
+      
+          <div class="container_input" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Already have an account? <a id="login_button" 
+              onclick="document.getElementById('id01').style.display='block'" 
+              style="width:auto;">Lonin</a>.</span>
+            
+          </div>
+        </form>
+      </div>
+
+      <!-- ########################## Login Moda2 ########################## -->
+      <div id="id02" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="title_container">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2 class="display-5" id="login_title">Customer Login</h2>
+          </div>
+      
+          <div class="container_input">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit" id="submit_login">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container_input" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+      
+
+      <!-- ########################## Contents ########################## -->
+      <!-- Carousel -->
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/main/m_salon_interior.png" alt="Poco a Poco Image" class="d-block" style="width:100%">
+            <div class="carousel-caption" id="c_caption1">
+              <h2 class="text-white display-5">Fashion Styles Personalised for You</h2>
+              <p class="text-white">Creative friendly stylists at your cosy, comfortable salon</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/main/m_christmas.png" alt="News 1" class="d-block" style="width:100%">
+            <div class="carousel-caption">
+            </div> 
+          </div>
+          <div class="carousel-item">
+            <img src="images/main/m_covid.png" alt="News 2" class="d-block" style="width:100%">
+            <div class="carousel-caption ">
+            </div>  
+          </div>
+        </div>
+        
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <!-- Salon Introduction-->
+      <section class="container my-5">
+        <div class="container col-12 ">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="display-5 text-primary">We are the best Japanese quality salon.</h1>
+              <p class="lead pt-2">
+                Our salon has been established since 2009 in the Auckland CBD and
+                now conveniently located in Newmarket. We have many local
+                customers enjoying our high quality Japanese techniques and
+                services.
+              </p>
+              <a href="about.html" class="btn btn-lg btn-primary mt-2 mb-5 text-white">About Us</a>
+            </div>
+
+            <div class="col-md-6">
+              <picture>
+                <source media="(min-width: 1140px)" srcset="images/main/m_salon_lg.png">
+                <source media="(min-width: 720px)" srcset="images/main/m_salon_md.png">
+                <img class="rounded mx-auto d-block img-fluid" src="images/main/m_salon.png" alt="Salon service image" width="100%">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="container bg-secondary border-2 border-top border-secondary">
+
+      <!-- Our Services -->
+      <section class="container-fluid px-lg-5">
+        <div class="container my-5 pt-5 pb-2">
+          <h2 class="container display-5 text-center text-primary">Our Services</h2>
+          <p class="lead text-center">
+            Our services are extensive. Men and women for a cut, treatment,<br>
+            coloring and perm, with organic options.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/main/m_icon_cut.png"
+              alt="CUt icon"><br>
+            <p class="text-center">Cut</p>
+          </div>
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/main/m_icon_treatment.png"
+              alt="Treatment icon"><br>
+            <p class="text-center">Treatment</p>
+          </div>
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/main/m_icon_color.png"
+              alt="Colouring icon"><br>
+            <p class="text-center">Colouring</p>
+          </div>
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/main/m_icon_straightening.png"
+              alt="Straightening icon"><br>
+            <p class="text-center">Straight Perm</p>
+          </div>
+
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/main/m_icon_perm.png"
+              alt="Perm icon"><br>
+            <p class="text-center">Permanent Wave</p>
+          </div>
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/main/m_icon_blow.png"
+              alt="Blow icon"><br>
+            <p class="text-center">Shampoo & Blow</p>
+          </div>
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/main/m_icon_updo.png"
+              alt="Updos icon"><br>
+            <p class="text-center">Hair Updos</p>
+          </div>
+          <div class="col-md-4 col-lg-3 pb-5">
+            <img
+              class="mx-auto d-block"
+              src="images/main/m_icon_eyebrow.png"
+              alt="Eye Brow icon"><br>
+            <p class="text-center">Eye Brows</p>
+          </div>
+        </div>
+
+        <div class="text-center mb-5 pt-3 pb-5">
+          <a href="services.html" class="btn btn-lg btn-primary text-white">Services</a>
+        </div>
+      </section>
+
+      <!-- ########################## Footer ########################## -->
+      <footer>
+        <div class="container-fluid bg-success px-3 py-5 p-sm-5">
+          <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-5 mb-md-0">
+              <h3 class="text-white pb-2">Opening Hours</h3>
+              <table class="table table-sm table-borderless text-white">
+                <tr>
+                  <td class="text-white">Monday</td>
+                  <td class="text-white">11:00 - 19:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Tuesday</td>
+                  <td class="text-white">11:00 - 19:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Wednesday</td>
+                  <td class="text-white">Closed</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Thursday</td>
+                  <td class="text-white">11:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Friday</td>
+                  <td class="text-white">11:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Saturday</td>
+                  <td class="text-white">10:00 - 18:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Sunday</td>
+                  <td class="text-white">10:00 - 18:00</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="col-md-8 ps-md-3">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4 class="text-white pb-2">Find Us</h4>
+                  <p class="text-white">
+                    59 Remuera Road,<br>
+                    Newmarket, Auckland 1050<br>
+                    09 379 8904<br>
+                    pocoappointment@icloud.com
+                  </p>
+                  <a onclick="newWindow()" class="btn btn-outline-light mb-4">Booking</a>
+                </div>
+
+                <!-- Google map -->
+                <div class="col-sm-6 float-end">
+                  <img src="images/common/map_1.png" width="100%" alt="Google Map">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="container-fluid py-4 pb-md-0">
+          <div class="row mt-3 mb-2 m-md-0">
+
+            <div class="col-md-12">
+              <a class="text-center" href="index.html" alt="Poco a poco Logo">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="images/common/logo_footer_lg.png">
+                  <img class="rounded mx-auto d-block" src="images/common/logo_footer_md.png" alt="Poco a poco Logo">
+                </picture>
+              </a>
+            </div>
+
+            <div class="col-md-6 pt-4 pt-md-0 ps-md-4">
+              <h6 class="text-center text-md-start">
+                <a class="text-center" href="help.html"><b>User Help</b></a>
+              </h6>
+            </div>
+
+            <div class="col-md-6">
+              <p class="text-center text-md-end pe-md-3">
+                <small>© 2021 Poco a poco, All Rights Reserved</small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    <!-- container-fluid end-->
+    </div>
+
+  </body>
+
+</html>

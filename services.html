@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Poco a poco is a Japanese high quality hair salon in Aucklan. d" />
+    <meta
+      name="keywords"
+      content="Hair salon, stylists, Cut, colour, Treatment, Permanent wave, Hair updo, Hair products"
+    />
+
+    <title>Our Service - Poco a poco - Hair Salon</title>
+
+    <script src="https://kit.fontawesome.com/99b5199ed8.js" crossorigin="anonymous"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="css/main.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Files-->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" type="text/css" href="css/services.css" />
+
+    <!-- JS Files-->
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+  </head>
+
+
+  <body>
+    <!-- ########################## Header/Navbar ########################## -->
+    <div class="container-fluid">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid px-4 px-md-5">
+          <a class="navbar-brand py-3 py-md-4" href="index.html">
+            <picture>
+              <source media="(min-width: 1140px)" srcset="images/common/logo_header_lg.png">
+              <source media="(min-width: 720px)" srcset="images/common/logo_header_md.png">
+              <img src="images/common/logo_header.png" alt="Poco a poco Logo">
+            </picture>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse pt-3" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"><b>About</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html"><b>Services</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html"><b>Products</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="newWindow()" style="cursor: pointer;"><b>Booking</b></a>
+              </li>
+              <li class="nav-item">
+                <p class="nav-link">|</p>
+              </li>
+              <li class="nav-item">
+                <!-- Button to open the modal login form -->
+                <button class="nav-link" id="login_button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><b class="text-primary">Register</b></button>
+              </li>
+              <li class="nav-item">
+                <!-- Button to open the modal login form -->
+                <button class="nav-link" id="login_button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><b class="text-primary">Login</b></button>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- ########################## Register Modal ########################## -->
+      <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="title_container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2 class="display-5 text-primary" id="register_title">Register</h2>
+          </div>
+      
+          <div class="container_input">
+            <div class="row">
+              <div class="col-6">
+                <label for="fname"><b>First name</b></label>
+                <input type="text" placeholder="First name" name="fname" required> 
+              </div>
+              <div class="col-6">
+                <label for="lname"><b>Last name</b></label>
+                <input type="text" placeholder="Last name" name="lname" required>
+              </div>
+            </div>
+
+            <label for="email"><b>Your Email</b></label>
+            <input type="email" placeholder="Your email" name="email" required>
+
+            <label for="mobile"><b>Mobile number</b></label>
+            <input type="tel" placeholder="Mobile number" name="mobile" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Password" name="psw" required>
+
+            <label for="psw"><b>Repeat Your Password</b></label>
+            <input type="password" placeholder="Repeat Your Password" name="psw" required>
+            
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" id="submit_login">Register</button>
+            
+          </div>
+      
+          <div class="container_input" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Already have an account? <a href="#">Sign in</a>.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- ########################## Login Moda2 ########################## -->
+      <div id="id02" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="title_container">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2 class="display-5" id="login_title">Customer Login</h2>
+          </div>
+      
+          <div class="container_input">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit" id="submit_login">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container_input" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
+      <!-- ########################## Contents ########################## -->
+        
+      <!-- Top Image -->
+      <div class="container-fluid">
+        <picture>
+          <source media="(min-width: 1140px)" srcset="images/common/salon_interior_top.png">
+          <source media="(min-width: 720px)" srcset="images/common/salon_interior_top.png">
+          <img class="mx-auto d-block img-fluid" src="images/common/salon_interior_top.png" alt="Salon service image" width="100%">
+        </picture>
+        <div class="container-fluid" id="page_title">
+          <h1 class="display-4 text-center text-white">Our Services</h1>
+        </div>
+      </div>       
+        
+      <!-- Service menu-->
+      <section class="m-3 m-sm-5">
+        <div class="container">
+          <div class="row justify-content-lg-between">
+
+            <div class="col-4 col-mid-2 col-lg-1">
+              <a href="#cut1" id="service_icon">
+                <img class="mx-auto d-block" src="images/services/s_icon_cut.png" alt="Cut icon"/>
+                <p class="text-primary text-center pt-2">Cut</p>
+              </a>
+            </div>
+
+            <div class="col-4 col-mid-2 col-lg-1">
+              <a href="#treatment2" id="service_icon">
+                <img class="mx-auto d-block" src="images/services/s_icon_treatment.png" alt="Treatment icon">
+                <p class="text-primary text-center">Treatment</p>
+              </a>
+            </div>
+
+            <div class="col-4 col-mid-2 col-lg-1">
+              <a href="#colouring3" id="service_icon">
+                <img class="mx-auto d-block" src="images/services/s_icon_coloring.png" alt="Colouring icon">
+                <p class="text-primary text-center">Colouring</p>
+              </a>
+            </div>
+
+            <div class="col-4 col-mid-2 col-lg-1">
+              <a href="#straighting4" id="service_icon">
+                <img class="mx-auto d-block" src="images/services/s_icon_straightening.png" alt="Straightening icon"/>
+                <p class="text-primary text-center">Straight<br>perms</p>
+              </a>
+            </div>
+
+            <div class="col-4 col-mid-2 col-lg-1">
+              <a href="#perm5" id="service_icon">
+                <img class="mx-auto d-block" src="images/services/s_icon_perm.png" alt="Permanent wave icon">
+                <p class="text-primary text-center">Permanent<br>Wave</p>
+              </a>
+            </div>
+
+            <div class="col-4 col-mid-2 col-lg-1">
+              <a href="#blow6" id="service_icon">
+                <img class="mx-auto d-block" src="images/services/s_icon_blow.png" alt="Hair blow icon">
+                <p class="text-primary text-center">Shampoo<br>& Blow</p>
+              </a>
+            </div>
+
+            <div class="col-4 col-mid-2 col-lg-1">
+              <a href="#updo7" id="service_icon">
+                <img class="mx-auto d-block" src="images/services/s_icon_updo.png" alt="Updo icon">
+                <p class="text-primary text-center">Hair Updo</p>
+              </a>
+            </div>
+
+            <div class="col-4 col-mid-2 col-lg-1">
+              <a href="#updo7" id="service_icon">
+                <img class="mx-auto d-block" src="images/services/s_icon_eyebrow.png" alt="Eye brow icon">
+                <p class="text-primary text-center">Eye Brow</p>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="container bg-secondary border-2 border-top border-secondary" />
+
+      <!-- Services -->
+      <section>
+          <div class="container m-5">
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end" id="cut1">Cut</h2>
+                <p class="text-md-end" id="caption">Wash and styling included</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg"><span class="fw-bold">Mens</span> $58 /$55 in cash<br>
+                  ($56 for Chain Booking Discount) <br>
+                  <span class="fw-bold">Womens</span> $68  / $65 in cash<br>
+                  ($66 for Chain Booking Discount)<br>
+                  <span class="fw-bold">Teens</span> (Age from 13 upto 19 with photo ID)<br>
+                  <span class="fw-bold">Boys</span>  $48 / $44 in cash<br>
+                  ($46 with Chain Booking)<br>
+                  <span class="fw-bold">Girls</span>  $58 / $54 in cash <br>
+                  ($56 with Chain Booking)<br>
+                  <span class="fw-bold">Kids</span> (Age 12 and under) $38 / $34 in cash<br>
+                  <span id="caption">*Shampoo for Kid’s hair cut $10 additional</span><br>
+                  <span class="fw-bold">Fringe hair cut</span> $15（$10 with the other service)<br>
+                  <span id="caption">*All cuts with color or Hair treatment discount $10</span>           
+                </p>
+              </div>
+            </div>  
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end" id="treatment2">Treatment</h2>
+                <p class="text-md-end" id="caption">Wash and styling included</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg"><span class="fw-bold">Options</span> (Permanent / Ammonia Free Botanical) <br>
+                  <span class="fw-bold">Short</span> From$56<br>
+                  <span class="fw-bold">Medium</span> From $56<br>
+                  <span class="fw-bold">Long</span> From $61<br>
+                  <span class="fw-bold">XLong</span> From $66<br>
+                  <span id="caption">*Additional $30 for a bleach</span>      
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end" id="colouring3">Hair Colouring</h2>
+                <p class="text-md-end" id="caption">Wash and styling included</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg"><span class="fw-bold">Mens very short</span> $110<br>
+                  <span class="fw-bold">Short</span> $135<br>
+                  <span class="fw-bold">Medium</span> From $145<br>
+                  <span class="fw-bold">Long</span> From $155<br>
+                  <span class="fw-bold">XLong</span> From $165<br>
+                  <span class="fw-bold">Retouch</span> (up to 3cm) $100 / (up to 5cm) $110<br>
+                  (up to 7.5cm)  $120 / (up to 10cm) $130 
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+          
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end">Toning Colour</h2>
+                <p class="text-md-end" id="caption">After prime color or bleach lifting</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">- Single -</span><br>
+                  <span class="fw-bold">Short</span> From $60<br>
+                  <span class="fw-bold">Medium</span> From $66<br>
+                  <span class="fw-bold">Long</span> From $72<br>
+                  <span class="fw-bold">XLong</span> From $78<br>
+                  <span class="fw-bold">- Double -</span><br>
+                  <span class="fw-bold">Short</span> From $100<br>
+                  <span class="fw-bold">Medium</span> From $106<br>
+                  <span class="fw-bold">Long</span> From $112<br>
+                  <span class="fw-bold">XLong</span> From $118
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end">Organic Henna Colour</h2>
+                <p class="text-md-end" id="caption">Wash and styling included</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">Short</span> $105<br>
+                  <span class="fw-bold">Medium</span> From $115<br>
+                  <span class="fw-bold">Long</span> From $125<br>
+                  <span class="fw-bold">XLong</span> From $135<br>
+                  <span class="fw-bold">Retouch</span> (up to 3cm) $95 / (up to 5cm) $100 /<br>
+                  (up to 7.5cm)  $105
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end">Organic Toning Colour</h2>
+                <p class="text-md-end" id="caption">After henna toning</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg"><span class="fw-bold">Mens very short</span> $110<br>
+                  <span class="fw-bold">Short</span> $55<br>
+                  <span class="fw-bold">Medium</span> From $61<br>
+                  <span class="fw-bold">Long</span> From $67<br>
+                  <span class="fw-bold">XLong</span> From $73
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end">Highlights</h2>
+                <p class="text-md-end" id="caption">Wash and styling included</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">- Top and Sides -</span><br>
+                  <span class="fw-bold">Short</span> $130<br>
+                  <span class="fw-bold">Medium</span> From $140<br>
+                  <span class="fw-bold">Long</span> From $150<br>
+                  <span class="fw-bold">XLong</span> From $160<br>
+                  <span class="fw-bold">- Full Head -</span><br>
+                  <span class="fw-bold">Short</span> $150<br>
+                  <span class="fw-bold">Medium</span> From $160<br>
+                  <span class="fw-bold">Long</span> From $170<br>
+                  <span class="fw-bold">XLong</span> From $180<br>
+                  <span id="caption">*Additional $30 for a bleach</span><br>
+                  <span class="fw-bold">Poco HLTS</span> $70<br>
+                  <span class="fw-bold">Partial</span> $90<br>
+                  <span id="caption">*Toning price applicable if needed</span> 
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end" id="straighting4">Permanent Hair Straightning</h2>
+                <p class="text-md-end" id="caption">Wash and styling included</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">Short</span> $270<br>
+                  <span class="fw-bold">Medium</span> From $290<br>
+                  <span class="fw-bold">Long</span> From $310<br>
+                  <span class="fw-bold">XLong</span> From $330<br>
+                  <span class="fw-bold">Retouch</span> (up to 5cm) From $260 /<br>
+                  (up to 10cm) From $270<br> 
+                  <span class="fw-bold">Fringe / Tiny partial Additional</span> $100<br>
+                  <span class="fw-bold">Fringe + Faceline Additional</span> $140<br>
+                  <span class="fw-bold">Half Head</span> Reduce $80 from full price<br>
+                  <span id="caption">*Japanese Super Straightening</span><br>
+                  <span id="caption">*The price includes 2.5 hours treatment</span><br>
+                  <span id="caption">$30/30 mins of over time charge may apply after 2.5 hours</span>
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end">Argila</h2>
+                <p class="text-md-end" id="caption">Natural clay keratin straightening</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">Short</span> From $230<br>
+                  <span class="fw-bold">Medium</span> From $250<br>
+                  <span class="fw-bold">Long</span> From $270<br>
+                  <span class="fw-bold">XLong</span> From $290<br>
+                  <span class="fw-bold">Retouch</span> (up to 5cm) From $220 / (up to 10cm) From $230<br>
+                  <span id="caption">*The price includes 2.5 hours treatment</span><br>
+                  <span id="caption"> $30/30 mins of over time charge may apply after 2.5 hours</span>
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end">Semi Straight Perms</h2>
+                <p class="text-md-end" id="caption">Non-thermal straightning</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">Short</span> From $190<br>
+                  <span class="fw-bold">Medium</span> From $200<br>
+                  <span class="fw-bold">Long</span> From $210<br>
+                  <span class="fw-bold">XLong</span> From $220<br>
+                  <span id="caption">*The price includes 3 hours treatment</span><br>
+                  <span id="caption"> $30/30 mins of over time charge may apply after 3 hours</span>
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end" id="perm5">Permanent Wave</h2>
+                <p class="text-md-end" id="caption">Cold hair perm with hair cut</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">Short</span> $210<br>
+                  <span class="fw-bold">Medium</span> From $220<br>
+                  <span class="fw-bold">Long</span> From $230<br>
+                  <span class="fw-bold">XLong</span> From $240<br>
+                  <span class="fw-bold">Half Head</span> (4 blocks) Reduce $80 from full price<br>
+                  <span class="fw-bold">Partial / Rods</span> (up to 5 rods/ Hair cut exclusive) $50<br>
+                  <span id="caption">*The price includes 2.5 hours treatment</span><br>
+                  <span id="caption"> $30/30 mins of over time charge may apply after 2.5 hours</span><br>
+                  <span id="caption"> *Intense curl treatment is an additional charge</span>
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end">Digi Hair Perms</h2>
+                <p class="text-md-end" id="caption">With hair cut</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">Short / Medium</span> From $260<br>
+                  <span class="fw-bold">Long</span> From $270<br>
+                  <span class="fw-bold">XLong</span> From $280<br>
+                  <span id="caption"> *The price includes 3.5 hours treatment</span><br>
+                  <span id="caption"> $30/30 mins of over time charge may apply after 3.5 hours</span>
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end">Digi Straight Curl</h2>
+                <p class="text-md-end" id="caption">With hair cut</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">Medium</span> From $335<br>
+                  <span class="fw-bold">Long</span> From $345<br>
+                  <span class="fw-bold">XLong</span> From $355<br>
+                  <span class="fw-bold">Retouch</span> (up to 3cm) $10 / (up to 5cm) $110<br>
+                  <span id="caption"> *The price includes 4 hours treatment</span><br>
+                  <span id="caption"> $30/30 mins of over time charge may apply after 4 hours</span>
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end" id="blow6">Shampoo & Blow</h2>
+                <p class="text-md-end" id="caption">Wave finish Or straight finish</p>
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">Short / Medium</span> From $35<br>
+                  <span class="fw-bold">Long / XLong</span> From $40<br>
+                  <span class="fw-bold">XLong</span> From $165<br>
+                  <span class="fw-bold">Shampoo & hand-hair-dryer only</span> $26
+                  </span>
+                </p>
+              </div>
+            </div> 
+
+            <hr class="container bg-primary border-1 border-top border-primary my-5" />
+
+            <div class="row justify-content-around">
+              <div class="col-md-4">
+                <h2 class="display-4 text-primary text-md-end" id="updo7">Extra</h2>
+                
+              </div>
+
+              <div class="col-md-6 pt-3 pt-md-0">
+                <p class="fs-6 fw-light lh-lg">
+                  <span class="fw-bold">Hair Updo</span> $68<br>
+                  <span class="fw-bold">Eye Brow Tint</span> $15 / <span class="fw-bold">Shape</span> $15<br>
+                  <span id="caption">*$10 with other service</span>
+                </p>
+              </div>
+            </div> 
+
+          </div>
+      </section>
+
+
+      
+      <!-- ########################## Footer ########################## -->
+      <footer>
+        <div class="container-fluid bg-success px-3 py-5 p-sm-5">
+          <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-5 mb-md-0">
+              <h3 class="text-white pb-2">Opening Hours</h3>
+              <table class="table table-sm table-borderless text-white">
+                <tr>
+                  <td class="text-white">Monday</td>
+                  <td class="text-white">11:00 - 19:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Tuesday</td>
+                  <td class="text-white">11:00 - 19:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Wednesday</td>
+                  <td class="text-white">Closed</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Thursday</td>
+                  <td class="text-white">11:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Friday</td>
+                  <td class="text-white">11:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Saturday</td>
+                  <td class="text-white">10:00 - 18:00</td>
+                </tr>
+                <tr>
+                  <td class="text-white">Sunday</td>
+                  <td class="text-white">10:00 - 18:00</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="col-md-8 ps-md-3">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4 class="text-white pb-2">Find Us</h4>
+                  <p class="text-white">
+                    59 Remuera Road,<br />
+                    Newmarket, Auckland 1050<br />
+                    09 379 8904<br />
+                    pocoappointment@icloud.com
+                  </p>
+                  <a onclick="newWindow()" class="btn btn-outline-light mb-4">Booking</a>
+                </div>
+
+                <!-- Google map -->
+                <div class="col-sm-6 float-end">
+                  <img src="images/common/map_1.png" width="100%" alt="Google Map">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="container-fluid py-4 pb-md-0">
+          <div class="row mt-3 mb-2 m-md-0">
+
+            <div class="col-md-12">
+              <a class="text-center" href="index.html" alt="Poco a poco Logo">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="images/common/logo_footer_lg.png">
+                  <img class="rounded mx-auto d-block" src="images/common/logo_footer_md.png" alt="Poco a poco Logo">
+                </picture>
+              </a>
+            </div>
+
+            <div class="col-md-6 pt-4 pt-md-0 ps-md-4">
+              <h6 class="text-center text-md-start">
+                <a class="text-center" href="help.html"><b>User Help</b></a>
+              </h6>
+            </div>
+
+            <div class="col-md-6">
+              <p class="text-center text-md-end pe-md-3">
+                <small>© 2021 Poco a poco, All Rights Reserved</small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    <!-- container-fluid end-->
+    </div>
+
+  </body>
+</html>
