@@ -1,6 +1,6 @@
 # PocoAPocoHairSaloon
 Web Development Assessment
-![Poco a Poco]()
+![Poco a Poco](https://github.com/Masamist/PocoAPocoHairSaloon/blob/main/pocoapoco.png)
 
 ## Introduction
 This project is a solo project working with a real client an opportunity to research CMS and their benefits and how they are configured. 
@@ -19,4 +19,4 @@ the client has decided to introduce an online booking system which minimizes the
 + Bootstrap
 
 ## Link
-(https://masamist.github.io/PocoAPocoHairSaloon/)
+[Poco a poco Hair Saloon Website](https://masamist.github.io/PocoAPocoHairSaloon/)
