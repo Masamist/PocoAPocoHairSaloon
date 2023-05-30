@@ -3,8 +3,8 @@ Web Development Assessment
 ![Poco a Poco](https://github.com/Masamist/PocoAPocoHairSaloon/blob/main/pocoapoco.png)
 
 ## Introduction
-This project is a solo project working with a real client an opportunity to research CMS and their benefits and how they are configured. 
-I created a static website, then included the CMS as a customer linking to the CMS site when they make a reservation. For ‘pocp a poco’ the CMS, I selected was SimplyBook.me. This is web based software CMS which enables you to create a booking then synchronize your booking on your calendar, also has features like managing membership and email remainder.
+This project is a solo project, working with a real client an opportunity to research CMS and their benefits and how they are configured. 
+I created a static website, then included the CMS as a customer linking to the CMS site when they make a reservation. For ‘pocp a poco’ the CMS I selected was SimplyBook.me. This is web based software CMS which enables you to create a booking then synchronize your booking on your calendar, also has features like managing membership and email reminder.
 
 ## Project Overview
 This Web project was to create a website using a Content Management System (CMS). 
